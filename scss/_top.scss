@@ -1,0 +1,157 @@
+.top {
+	min-height: 100vh;
+	background: url(../img/bg-top.svg);
+	background-position: 0 0;
+	background-size: auto;
+	background-repeat: no-repeat;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: min-content 1fr min-content;
+	padding: 20px 35px;
+}
+
+.header-logo {
+}
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 144px;
+}
+.nav-link {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 19px;
+	text-align: center;
+	color: #19191b;
+	&:not(:first-child) {
+		margin-left: 43px;
+	}
+}
+.auth-box {
+	display: flex;
+	align-items: center;
+
+	&__link {
+		@include button;
+
+		&:not(:first-child) {
+			margin-left: 15px;
+		}
+	}
+}
+
+.top-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-top: 109px;
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		padding-top: 60px;
+	}
+
+	&__heading-h1 {
+		font-weight: 600;
+		font-size: 90px;
+		line-height: 110%;
+		color: #19191b;
+	}
+
+	&__heading-h3 {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 100%;
+		color: #19191b;
+		padding: 30px 0 48px;
+	}
+
+	&__text {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 39px;
+		color: #696871;
+		&_small {
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 160%;
+			padding: 10px 0 24px;
+		}
+	}
+
+	&__button {
+		@include button;
+		padding: 19px 93px;
+		align-self: flex-start;
+	}
+
+	&__slide {
+		display: flex;
+		height: 659px;
+	}
+
+	&__slide-bg {
+		position: relative;
+		width: 100%;
+		max-height: 659px;
+		display: flex;
+		background: url(../img/top-phone.png);
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: 160px top;
+		transform: scale(0);
+		transition: 0.3s;
+		animation: show 0.6s 1; /* Указываем название анимации, её время и количество повторов*/
+		animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+		animation-delay: 1s; /* Задержка перед началом */
+	}
+
+	&__card {
+		position: absolute;
+		top: 190px;
+		right: 107px;
+	}
+}
+
+.phone-card {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	width: 305px;
+
+	&_top {
+		top: 88px;
+		left: 90px;
+		background: #5454d4;
+		box-shadow: 0px 32px 34px rgba(28, 27, 32, 0.198973);
+		border-radius: 8px;
+		padding: 21px 18px;
+	}
+
+	&_bottom {
+		right: -98px;
+		bottom: 120px;
+		background: #fedc5a;
+		box-shadow: 0px 32px 34px rgba(28, 27, 32, 0.198973);
+		border-radius: 8px;
+		padding: 20px 21px;
+		z-index: 10;
+	}
+
+	&__icon {
+		margin-right: 15px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 22px;
+		color: #19191b;
+		&_white {
+			color: #ffffff;
+		}
+	}
+}

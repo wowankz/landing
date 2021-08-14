@@ -1,0 +1,68 @@
+.software {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+.software-text {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 16px;
+	line-height: 110%;
+	color: #696871;
+}
+.softwae-hr {
+	flex-grow: 1;
+	display: block;
+	height: 1px;
+	background: #eae9f2;
+	margin-left: 15px;
+}
+.software-icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 40px;
+}
+.software-icon {
+	width: 32px;
+	height: 32px;
+}
+
+.projects {
+	background-color: #f9f9fe;
+	background: url(../img/bg-project.png);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 167px;
+	padding-bottom: 187px;
+}
+
+.projects-card {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+	flex-grow: 1;
+	margin-right: 96px;
+}
+
+.projects-desc {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+.projects-title {
+	max-width: 507px;
+	font-weight: 600;
+	font-size: 60px;
+	line-height: 70px;
+	color: #ffffff;
+	margin-bottom: 30px;
+}
+
+.projects-text {
+	font-size: 20px;
+	line-height: 150%;
+	color: rgba(255, 255, 255, 0.702469);
+}

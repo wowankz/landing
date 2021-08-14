@@ -1,0 +1,129 @@
+.footer {
+	min-height: 1164px;
+	background: url(../img/bg-footer.svg);
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer-title {
+	max-width: 712px;
+	font-weight: 600;
+	font-size: 60px;
+	line-height: 70px;
+	text-align: center;
+	color: #ffffff;
+	padding: 298px 0 112px;
+}
+.footer-accept {
+	&__labal {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__input {
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		left: -2000px;
+	}
+
+	&__check {
+		width: 31px;
+		height: 31px;
+		background: #c4c4c4;
+		border-radius: 3px;
+		margin-right: 61px;
+		cursor: pointer;
+	}
+
+	&__link {
+		font-size: 16px;
+		line-height: 22px;
+		text-align: center;
+		color: #f5f7ff;
+	}
+}
+
+.footer-button {
+	@include button;
+	width: 480px;
+	padding: 19px 140px;
+	margin-top: 40px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+	text-align: center;
+	color: #ffffff;
+	&:hover {
+		box-shadow: 2px 2px 2px 0px #f6f9fc7d;
+	}
+
+	&:active {
+		box-shadow: inset 2px 2px 2px 0px #0f253e4f;
+	}
+}
+
+.footer-nav {
+	align-self: stretch;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	margin-top: 183px;
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__menu-title {
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 16px;
+		color: #ffffff;
+		margin-bottom: 10px;
+	}
+
+	&__menu-link {
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 25px;
+		color: rgba(255, 255, 255, 0.7);
+	}
+}
+
+.footer-icons {
+	margin: 60px 0;
+}
+.footer-icon {
+	width: 16px;
+	height: 16px;
+	transition: 0.2s;
+	&:not(:first-child) {
+		margin-left: 18px;
+	}
+
+	&:hover {
+		transform: scale(1.6);
+		border-radius: 50%;
+		border: 1px solid #ffffff;
+	}
+}
+
+.footer-hr {
+	background: #2f2f31;
+	height: 1px;
+	width: 100%;
+	max-width: 1111px;
+	margin: 0 auto;
+}
+
+.footer-copy {
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 100%;
+	color: rgba(255, 255, 255, 0.7);
+	margin-top: 20px;
+	align-self: start;
+}
