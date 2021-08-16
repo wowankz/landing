@@ -207,6 +207,12 @@ h3 {
   background-repeat: no-repeat;
 }
 
+@media (min-width: 1441px) {
+  .top {
+    background-size: contain;
+  }
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -363,6 +369,7 @@ h3 {
 
 .top-content__slide-bg {
   position: relative;
+  left: 50px;
   width: 100%;
   max-height: 758px;
   display: -webkit-box;
@@ -586,6 +593,7 @@ h3 {
 .how-work {
   background: #f9f9fe;
   padding: 159px 0;
+  margin-top: -8px;
 }
 
 .how-work__title {
@@ -850,7 +858,8 @@ h3 {
   padding-bottom: 122px;
   background: url(../img/bg-benefits.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -865,7 +874,7 @@ h3 {
   max-width: 1120px;
   height: 1px;
   background: #e5eaf4;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 
 .benefits-title {
@@ -925,7 +934,9 @@ h3 {
 .footer {
   min-height: 1164px;
   background: url(../img/bg-footer.svg);
-  background-position: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -936,6 +947,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: -5px;
 }
 
 .footer-title {
