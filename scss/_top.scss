@@ -1,7 +1,7 @@
 .top {
 	min-height: 100vh;
 	background: url(../img/bg-top.svg);
-	background-position: 0 0;
+	background-position: top left;
 	background-size: auto;
 	background-repeat: no-repeat;
 }
@@ -18,7 +18,7 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding-right: 144px;
+	padding-right: 125px;
 }
 .nav-link {
 	text-decoration: none;
@@ -91,29 +91,29 @@
 
 	&__slide {
 		display: flex;
-		height: 659px;
+		height: 758px;
 	}
 
 	&__slide-bg {
 		position: relative;
 		width: 100%;
-		max-height: 659px;
+		max-height: 758px;
 		display: flex;
 		background: url(../img/top-phone.png);
-		background-size: auto;
+		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: 160px top;
-		transform: scale(0);
-		transition: 0.3s;
-		animation: show 0.6s 1; /* Указываем название анимации, её время и количество повторов*/
-		animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
-		animation-delay: 1s; /* Задержка перед началом */
+		background-position: right;
+		// transform: scale(0);
+		// transition: 0.3s;
+		// animation: show 0.6s 1; /* Указываем название анимации, её время и количество повторов*/
+		// animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+		// animation-delay: 1s; /* Задержка перед началом */
 	}
 
 	&__card {
 		position: absolute;
 		top: 190px;
-		right: 107px;
+		right: 150px;
 	}
 }
 
@@ -125,21 +125,28 @@
 
 	&_top {
 		top: 88px;
-		left: 90px;
+		left: 45px;
 		background: #5454d4;
 		box-shadow: 0px 32px 34px rgba(28, 27, 32, 0.198973);
 		border-radius: 8px;
 		padding: 21px 18px;
+		transition: 0.3s;
+		animation: showFromRight 0.6s 1; /* Указываем название анимации, её время и количество повторов*/
+		animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
 	}
 
 	&_bottom {
-		right: -98px;
-		bottom: 120px;
+		right: -50px;
+		bottom: 220px;
 		background: #fedc5a;
 		box-shadow: 0px 32px 34px rgba(28, 27, 32, 0.198973);
 		border-radius: 8px;
 		padding: 20px 21px;
 		z-index: 10;
+		transition: 0.3s;
+		animation: showFromLeft 0.6s 1; /* Указываем название анимации, её время и количество повторов*/
+		animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+
 	}
 
 	&__icon {

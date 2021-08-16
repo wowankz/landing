@@ -31,7 +31,11 @@
 .projects {
 	background-color: #f9f9fe;
 	background: url(../img/bg-project.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top right;
 	width: 100%;
+	height: 65vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

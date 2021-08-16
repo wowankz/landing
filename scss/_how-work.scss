@@ -24,7 +24,6 @@
 		display: flex;
 		padding: 60px 0;
 		margin: 0 auto;
-		position: sticky;
 		top: 0;
 		z-index: 100;
 	}
@@ -42,11 +41,23 @@
 		color: #808080;
 
 		&_active {
+			position: relative;
 			background: #4c4ce6;
 			font-weight: bold;
 			font-size: 24px;
 			text-align: center;
 			color: #ffffff;
+			// &::after{
+			// 	position: absolute;
+			// 	top: calc(50% - 7px);
+			// 	right: -7px;
+			// 	content: '';
+			// 	display: block;
+			// 	width: 14px;
+			// 	height: 14px;
+			// 	background: #4c4ce6;
+			// 	transform: rotate(45deg);
+			// }
 		}
 
 		&:first-child {

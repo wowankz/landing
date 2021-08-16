@@ -21,8 +21,6 @@ h3 {
 }
 
 .page {
-  max-width: 1440px;
-  margin: 0 auto;
   padding-bottom: 50px;
 }
 
@@ -161,10 +159,54 @@ h3 {
   }
 }
 
+@-webkit-keyframes showFromLeft {
+  0% {
+    opacity: 0;
+    right: 100%;
+  }
+  100% {
+    opacity: 1;
+    right: -50px;
+  }
+}
+
+@keyframes showFromLeft {
+  0% {
+    opacity: 0;
+    right: 100%;
+  }
+  100% {
+    opacity: 1;
+    right: -50px;
+  }
+}
+
+@-webkit-keyframes showFromRight {
+  0% {
+    opacity: 0;
+    left: 100%;
+  }
+  100% {
+    opacity: 1;
+    left: 45px;
+  }
+}
+
+@keyframes showFromRight {
+  0% {
+    opacity: 0;
+    left: 100%;
+  }
+  100% {
+    opacity: 1;
+    left: 45px;
+  }
+}
+
 .top {
   min-height: 100vh;
   background: url(../img/bg-top.svg);
-  background-position: 0 0;
+  background-position: top left;
   background-size: auto;
   background-repeat: no-repeat;
 }
@@ -188,7 +230,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 144px;
+  padding-right: 125px;
 }
 
 .nav-link {
@@ -320,39 +362,26 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 659px;
+  height: 758px;
 }
 
 .top-content__slide-bg {
   position: relative;
   width: 100%;
-  max-height: 659px;
+  max-height: 758px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: url(../img/top-phone.png);
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 160px top;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-animation: show 0.6s 1;
-          animation: show 0.6s 1;
-  /* Указываем название анимации, её время и количество повторов*/
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  /* Чтобы элемент оставался в конечном состоянии анимации */
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  /* Задержка перед началом */
+  background-position: right;
 }
 
 .top-content__card {
   position: absolute;
   top: 190px;
-  right: 107px;
+  right: 150px;
 }
 
 .phone-card {
@@ -368,23 +397,39 @@ h3 {
 
 .phone-card_top {
   top: 88px;
-  left: 90px;
+  left: 45px;
   background: #5454d4;
   -webkit-box-shadow: 0px 32px 34px rgba(28, 27, 32, 0.198973);
           box-shadow: 0px 32px 34px rgba(28, 27, 32, 0.198973);
   border-radius: 8px;
   padding: 21px 18px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: showFromRight 0.6s 1;
+          animation: showFromRight 0.6s 1;
+  /* Указываем название анимации, её время и количество повторов*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /* Чтобы элемент оставался в конечном состоянии анимации */
 }
 
 .phone-card_bottom {
-  right: -98px;
-  bottom: 120px;
+  right: -50px;
+  bottom: 220px;
   background: #fedc5a;
   -webkit-box-shadow: 0px 32px 34px rgba(28, 27, 32, 0.198973);
           box-shadow: 0px 32px 34px rgba(28, 27, 32, 0.198973);
   border-radius: 8px;
   padding: 20px 21px;
   z-index: 10;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: showFromLeft 0.6s 1;
+          animation: showFromLeft 0.6s 1;
+  /* Указываем название анимации, её время и количество повторов*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /* Чтобы элемент оставался в конечном состоянии анимации */
 }
 
 .phone-card__icon {
@@ -452,7 +497,11 @@ h3 {
 .projects {
   background-color: #f9f9fe;
   background: url(../img/bg-project.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
   width: 100%;
+  height: 65vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,8 +585,6 @@ h3 {
   display: flex;
   padding: 60px 0;
   margin: 0 auto;
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   z-index: 100;
 }
@@ -555,6 +602,7 @@ h3 {
 }
 
 .how-work__tab_active {
+  position: relative;
   background: #4c4ce6;
   font-weight: bold;
   font-size: 24px;

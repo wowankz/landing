@@ -20,8 +20,8 @@ h3 {
 }
 
 .page {
-	max-width: 1440px;
-	margin: 0 auto;
+	// max-width: 1440px;
+	// margin: 0 auto;
 	padding-bottom: 50px;
 }
 
@@ -73,16 +73,17 @@ h3 {
 	border-radius: 8px;
 	padding: 20px;
 	z-index: 100;
+	transform: scale(0);
 	transition: 0.3s;
-	animation: show 0.3s 1; /* Указываем название анимации, её время и количество повторов*/
-	//animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
-	animation-delay: 0.5s; /* Задержка перед началом */
 
 	&__close {
 		position: absolute;
 		top: 10px;
 		right: 10px;
 		cursor: pointer;
+		&:hover{
+
+		}
 	}
 	&__text {
 		font-size: 14px;
@@ -147,6 +148,29 @@ h3 {
 		transform: scale(1);
 	}
 }
+
+@keyframes showFromLeft {
+	0% {
+		opacity: 0;
+		right: 100%;
+	}
+	100% {
+		opacity: 1;
+		right: -50px;
+	}
+}
+
+@keyframes showFromRight {
+	0% {
+		opacity: 0;
+		left: 100%;
+	}
+	100% {
+		opacity: 1;
+		left: 45px;
+	}
+}
+
 
 @import 'top';
 @import 'software-project';
