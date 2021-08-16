@@ -787,7 +787,10 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   background: #ffffff;
-  padding: 124px 0 213px 165px;
+  background: url(../img/bg-price.svg);
+  background-size: auto;
+  background-position: right 124px;
+  background-repeat: no-repeat;
 }
 
 .price-left {
@@ -798,6 +801,8 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 540px;
+  margin-bottom: 214px;
 }
 
 .price-left__title {
@@ -805,7 +810,7 @@ h3 {
   font-size: 60px;
   line-height: 110%;
   color: #1d293f;
-  margin-top: 125px;
+  margin-top: 250px;
   margin-bottom: 96px;
 }
 
