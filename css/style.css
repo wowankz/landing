@@ -81,14 +81,10 @@ h3 {
   border-radius: 8px;
   padding: 20px;
   z-index: 100;
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-animation: show 0.3s 1;
-          animation: show 0.3s 1;
-  /* Указываем название анимации, её время и количество повторов*/
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  /* Задержка перед началом */
 }
 
 .modal-cookie__close {
@@ -137,25 +133,25 @@ h3 {
   text-decoration: none;
 }
 
-@-webkit-keyframes show {
+@-webkit-keyframes phoneAnimate {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translateX(-320%);
+            transform: translateX(-320%);
   }
 }
 
-@keyframes show {
+@keyframes phoneAnimate {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translateX(-320%);
+            transform: translateX(-320%);
   }
 }
 
@@ -378,10 +374,42 @@ h3 {
   background-position: right;
 }
 
-.top-content__card {
+.top-content__cards {
   position: absolute;
   top: 190px;
-  right: 150px;
+  right: 135px;
+  width: 285px;
+  height: 274px;
+  padding: 0 15px;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.top-content__cards::after {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.top-content__cards:hover .top-content__card {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.top-content__card {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: phoneAnimate 12s infinite;
+          animation: phoneAnimate 12s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.top-content__card:not(:first-child) {
+  margin-left: 15px;
 }
 
 .phone-card {
@@ -579,13 +607,18 @@ h3 {
 }
 
 .how-work__tabs {
+  position: -webkit-sticky;
+  position: sticky;
   max-width: 1178px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 60px 0;
   margin: 0 auto;
-  top: 0;
+  top: -50px;
   z-index: 100;
 }
 
@@ -599,15 +632,16 @@ h3 {
   line-height: 32px;
   text-align: center;
   color: #808080;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .how-work__tab_active {
   position: relative;
   background: #4c4ce6;
-  font-weight: bold;
-  font-size: 24px;
   text-align: center;
   color: #ffffff;
+  text-shadow: 1px 0px 0px #ffffff;
 }
 
 .how-work__tab:first-child {
@@ -656,11 +690,6 @@ h3 {
 .how-work__cards-item:last-child > .how-work__cards-img::after {
   top: -30px;
   bottom: 50%;
-}
-
-.how-work__cards-item:hover .how-work__cards-radio {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 .how-work__cards-item.active .how-work__cards-radio {

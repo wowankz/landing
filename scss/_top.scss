@@ -110,10 +110,35 @@
 		// animation-delay: 1s; /* Задержка перед началом */
 	}
 
-	&__card {
+	&__cards {
 		position: absolute;
 		top: 190px;
-		right: 150px;
+		right: 135px;
+		width: 285px;
+		height: 274px;
+		padding: 0 15px;
+		display: -webkit-box;
+		overflow: hidden;
+		&::after {
+			content: '';
+			display: block;
+			width: 1rem;
+			height: 1rem;
+		}
+
+		&:hover .top-content__card{
+			animation-play-state: paused;
+		}
+	}
+
+	&__card{
+		transition: 0.3s;
+		animation: phoneAnimate 12s infinite ;
+		animation-timing-function: linear;
+		animation-direction: alternate;
+		&:not(:first-child){
+			margin-left: 15px;
+		}
 	}
 }
 
@@ -146,7 +171,6 @@
 		transition: 0.3s;
 		animation: showFromLeft 0.6s 1; /* Указываем название анимации, её время и количество повторов*/
 		animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
-
 	}
 
 	&__icon {
