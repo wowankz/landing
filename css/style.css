@@ -371,7 +371,7 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url(../img/top-phone.png);
+  background: url(../img/top-phone.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
