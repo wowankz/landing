@@ -20,9 +20,11 @@
 	padding: 298px 0 112px;
 }
 .footer-accept {
+	margin-top: 40px;
 	&__labal {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 
 	&__input {
@@ -46,7 +48,7 @@
 		height: 31px;
 		background: #c4c4c4;
 		border-radius: 3px;
-		margin-right: 61px;
+		margin-right: 20px;
 		cursor: pointer;
 		transition: .2s;
 		&:focus{
@@ -66,7 +68,7 @@
 	@include button;
 	width: 480px;
 	padding: 19px 140px;
-	margin-top: 40px;
+
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 22px;

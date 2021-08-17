@@ -968,6 +968,10 @@ h3 {
   padding: 298px 0 112px;
 }
 
+.footer-accept {
+  margin-top: 40px;
+}
+
 .footer-accept__labal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -975,6 +979,9 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-accept__input {
@@ -999,7 +1006,7 @@ h3 {
   height: 31px;
   background: #c4c4c4;
   border-radius: 3px;
-  margin-right: 61px;
+  margin-right: 30px;
   cursor: pointer;
   -webkit-transition: .2s;
   transition: .2s;
@@ -1030,7 +1037,6 @@ h3 {
   transition: 0.2s;
   width: 480px;
   padding: 19px 140px;
-  margin-top: 40px;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
