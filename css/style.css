@@ -1149,7 +1149,7 @@ h3 {
 .sing-in {
   background-color: #f9f9fe;
   background: url(../img/bg-project.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
   width: 100%;
