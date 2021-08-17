@@ -1,0 +1,96 @@
+.sing-in {
+	background-color: #f9f9fe;
+	background: url(../img/bg-project.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top right;
+	width: 100%;
+	height: 65vw;
+	&__form {
+		width: 500px;
+	}
+
+	&__google,
+	&__facebook {
+		@include button;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #f5f7ff;
+		border-radius: 5px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 22px;
+		text-align: center;
+		color: #19191b;
+		padding: 15px 30px;
+		margin-bottom: 15px;
+		border: none;
+		outline: none;
+		& > img {
+			margin-right: 20px;
+		}
+	}
+}
+.main {
+	display: flex;
+	justify-content: center;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+.form-title {
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 120%;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom: 40px;
+	margin-top: 21px;
+}
+.form-email,
+.form-pass {
+	background: #ffffff;
+	border-radius: 5px;
+	padding: 19px 30px;
+	margin-bottom: 10px;
+	border: none;
+}
+.forgot-email,
+.forgot-pass {
+	align-self: flex-end;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 19px;
+	text-align: center;
+	color: #f5f7ff;
+	text-decoration: none;
+	margin-bottom: 20px;
+	&:hover {
+		color: #f0544c;
+	}
+}
+
+.form-button__submit {
+	@include button;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+	text-align: center;
+	color: #ffffff;
+	padding: 19px 30px;
+	margin-top: 30px;
+	border: none;
+	outline: none;
+}
+.form-or {
+	align-self: center;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+	text-align: center;
+	color: #ffffff;
+	padding: 20px;
+}

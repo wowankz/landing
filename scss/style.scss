@@ -131,6 +131,7 @@ h3 {
 	color: #ffffff;
 	padding: 11px 18px;
 	transition: 0.2s;
+	cursor: pointer;
 	&:hover, &:focus {
 		border: none;
 		outline: none;
@@ -180,3 +181,4 @@ h3 {
 @import 'price';
 @import 'benefits';
 @import 'footer';
+@import 'sing-in';
