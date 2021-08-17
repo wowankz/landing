@@ -33,7 +33,9 @@
 
 	&__tab {
 		background: #ffffff;
-		border: 1px solid #d2d2f9;
+		border-top: 1px solid #d2d2f9;
+		border-bottom: 1px solid #d2d2f9;
+		border-left: 1px solid #d2d2f9;
 		padding: 16px 47px;
 		text-decoration: none;
 		font-weight: 500;
@@ -72,6 +74,7 @@
 		&:last-child {
 			border-bottom-right-radius: 8px;
 			border-top-right-radius: 8px;
+			border-right: 1px solid #d2d2f9;
 		}
 	}
 
