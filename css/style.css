@@ -1156,6 +1156,11 @@ h3 {
   height: 65vw;
 }
 
+.sing-in__logo {
+  width: 127px;
+  height: 37px;
+}
+
 .sing-in__form {
   width: 500px;
 }
