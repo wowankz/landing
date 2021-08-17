@@ -30,6 +30,11 @@
 		height: 1px;
 		position: absolute;
 		left: -2000px;
+		&:checked + .footer-accept__check{
+			background: url(../img/checkbox-checked.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
 	}
 
 	&__check {
@@ -39,6 +44,7 @@
 		border-radius: 3px;
 		margin-right: 61px;
 		cursor: pointer;
+		transition: .2s;
 	}
 
 	&__link {

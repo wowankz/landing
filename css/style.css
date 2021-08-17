@@ -977,6 +977,12 @@ h3 {
   left: -2000px;
 }
 
+.footer-accept__input:checked + .footer-accept__check {
+  background: url(../img/checkbox-checked.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .footer-accept__check {
   width: 31px;
   height: 31px;
@@ -984,6 +990,8 @@ h3 {
   border-radius: 3px;
   margin-right: 61px;
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .footer-accept__link {
