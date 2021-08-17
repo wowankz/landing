@@ -35,6 +35,10 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 		}
+
+		&:focus + .footer-accept__check{
+			outline: 1px solid #007bff;
+		}
 	}
 
 	&__check {
@@ -45,6 +49,9 @@
 		margin-right: 61px;
 		cursor: pointer;
 		transition: .2s;
+		&:focus{
+			outline: 1px solid red;
+		}
 	}
 
 	&__link {

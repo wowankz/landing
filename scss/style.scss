@@ -131,7 +131,9 @@ h3 {
 	color: #ffffff;
 	padding: 11px 18px;
 	transition: 0.2s;
-	&:hover {
+	&:hover, &:focus {
+		border: none;
+		outline: none;
 		box-shadow: 2px 2px 2px 0px #0f253e4f;
 	}
 

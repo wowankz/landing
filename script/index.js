@@ -1,6 +1,6 @@
 
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
     const modal_cookie = document.querySelector('.modal-cookie');
     modal_cookie.style.transform = 'scale(1)'
     modal_cookie.addEventListener('click', (event) => {

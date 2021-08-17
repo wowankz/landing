@@ -267,7 +267,9 @@ h3 {
   transition: 0.2s;
 }
 
-.auth-box__link:hover {
+.auth-box__link:hover, .auth-box__link:focus {
+  border: none;
+  outline: none;
   -webkit-box-shadow: 2px 2px 2px 0px #0f253e4f;
           box-shadow: 2px 2px 2px 0px #0f253e4f;
 }
@@ -346,7 +348,9 @@ h3 {
       align-self: flex-start;
 }
 
-.top-content__button:hover {
+.top-content__button:hover, .top-content__button:focus {
+  border: none;
+  outline: none;
   -webkit-box-shadow: 2px 2px 2px 0px #0f253e4f;
           box-shadow: 2px 2px 2px 0px #0f253e4f;
 }
@@ -983,6 +987,10 @@ h3 {
   background-repeat: no-repeat;
 }
 
+.footer-accept__input:focus + .footer-accept__check {
+  outline: 1px solid #007bff;
+}
+
 .footer-accept__check {
   width: 31px;
   height: 31px;
@@ -992,6 +1000,10 @@ h3 {
   cursor: pointer;
   -webkit-transition: .2s;
   transition: .2s;
+}
+
+.footer-accept__check:focus {
+  outline: 1px solid red;
 }
 
 .footer-accept__link {
@@ -1023,7 +1035,9 @@ h3 {
   color: #ffffff;
 }
 
-.footer-button:hover {
+.footer-button:hover, .footer-button:focus {
+  border: none;
+  outline: none;
   -webkit-box-shadow: 2px 2px 2px 0px #0f253e4f;
           box-shadow: 2px 2px 2px 0px #0f253e4f;
 }
