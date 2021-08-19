@@ -797,8 +797,8 @@ h3 {
   display: flex;
   background: #ffffff;
   background: url(../img/bg-price.svg);
-  background-size: auto;
-  background-position: right 124px;
+  background-size: 780px;
+  background-position: right center;
   background-repeat: no-repeat;
 }
 
