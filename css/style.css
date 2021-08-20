@@ -770,6 +770,7 @@ h3 {
 }
 
 .how-work__card-title {
+  width: 448px;
   font-weight: 600;
   font-size: 30px;
   line-height: 48px;
