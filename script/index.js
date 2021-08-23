@@ -50,7 +50,6 @@ function showModalCookie() {
         }
 
         if (event.target.id === 'manage-cookie') {
-            console.log('Manage cookie');
             const modal_manage = document.querySelector('.modal-manage');
             closeModalCookie();
             modal_manage.classList.add('modal_show');
@@ -68,6 +67,36 @@ function showModalCookie() {
                     modal_manage.classList.remove('modal_show');
                     setTimeout(() => { showModalCookie(); }, 300)
                 }
+
+                if (event.target.classList.contains('modal-manage__info-check')) {
+                    const checks = modal_manage.querySelectorAll('.modal-manage__info-input');
+                    const checked_cookie = [];
+                    const btn_selected_cookie = modal_manage.querySelector('#selected_cookie')
+                    setTimeout(() => {
+                        for (let item of checks) {
+                            if (item.checked) checked_cookie.push(item);
+                        }
+                        if (checked_cookie.length <= 0) {
+                            btn_selected_cookie.classList.add('modal-btn_disabled')
+                        } else {
+                            btn_selected_cookie.classList.remove('modal-btn_disabled')
+                        }
+                    }, 0)
+
+                }
+                if (event.target.classList.contains('modal-btn')) {
+                    switch (event.target.id) {
+                        case 'all_cookie':
+                            console.log('Set all cookie');
+                            modal_manage.classList.remove('modal_show');
+                            break;
+                        case 'selected_cookie':
+                            console.log('Set selected cookie');
+                            modal_manage.classList.remove('modal_show');
+                            break;
+                    }
+                }
+
             })
         }
     });
