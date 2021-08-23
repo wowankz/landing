@@ -152,73 +152,73 @@
 	padding: 20px;
 }
 
-// modal policy
+// // modal policy
 
-.modal-policy {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background-color: #000000ba;
-	display: none;
-	transition: .3s;
-	transform: scale(0);
+// .modal-policy {
+// 	position: fixed;
+// 	left: 0;
+// 	right: 0;
+// 	top: 0;
+// 	bottom: 0;
+// 	background-color: #000000ba;
+// 	display: none;
+// 	transition: .3s;
+// 	transform: scale(0);
 
 
-	&__close {
-		position: absolute;
-		top: 30px;
-		right: 33px;
-		width: 32px;
-		height: 32px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border: 1px solid #979797;
-		border-radius: 50%;
-		color:#979797;
-		font-size: 20px;
-		line-height: 24px;
-		cursor: pointer;
-		transition: .3s;
-		transform: rotate(45deg);
+// 	&__close {
+// 		position: absolute;
+// 		top: 30px;
+// 		right: 33px;
+// 		width: 32px;
+// 		height: 32px;
+// 		display: flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		border: 1px solid #979797;
+// 		border-radius: 50%;
+// 		color:#979797;
+// 		font-size: 20px;
+// 		line-height: 24px;
+// 		cursor: pointer;
+// 		transition: .3s;
+// 		transform: rotate(45deg);
 
-		&:hover{
-			color:red;
-			border-color: red;
-		}
-	}
+// 		&:hover{
+// 			color:red;
+// 			border-color: red;
+// 		}
+// 	}
 
-	&__content {
-		position: absolute;
-		width: 920px;
-		max-height: 96vh;
-		left: calc(50% - 460px);
-		background: #e5e5e5;
-		border-radius: 10px;
-		margin: 20px 0;
-		padding: 35px 65px 65px;
-		overflow: auto;
-	}
+// 	&__content {
+// 		position: absolute;
+// 		width: 920px;
+// 		max-height: 96vh;
+// 		left: calc(50% - 460px);
+// 		background: #e5e5e5;
+// 		border-radius: 10px;
+// 		margin: 20px 0;
+// 		padding: 35px 65px 65px;
+// 		overflow: auto;
+// 	}
 
-	&__content-heading {
-		font-weight: bold;
-		font-size: 16px;
-		line-height: 22px;
-		display: flex;
-		align-items: center;
-		color: #2d2c31;
-		margin-bottom: 14px;
-		margin-top: 30px;
-	}
+// 	&__content-heading {
+// 		font-weight: bold;
+// 		font-size: 16px;
+// 		line-height: 22px;
+// 		display: flex;
+// 		align-items: center;
+// 		color: #2d2c31;
+// 		margin-bottom: 14px;
+// 		margin-top: 30px;
+// 	}
 
-	&__content-text {
-		font-size: 14px;
-		line-height: 130%;
-		display: flex;
-		align-items: center;
-		color: #45434e;
-		margin-bottom: 10px;
-	}
-}
+// 	&__content-text {
+// 		font-size: 14px;
+// 		line-height: 130%;
+// 		display: flex;
+// 		align-items: center;
+// 		color: #45434e;
+// 		margin-bottom: 10px;
+// 	}
+// }
