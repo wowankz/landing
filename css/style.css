@@ -172,6 +172,7 @@ h3 {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  opacity: .7;
 }
 
 .modal-btn_disabled {
@@ -1081,6 +1082,7 @@ h3 {
   height: 160px;
   background: #ebebeb;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .price {
