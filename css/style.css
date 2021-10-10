@@ -1725,6 +1725,7 @@ h3 {
 @media (max-width: 425px) {
   .footer {
     padding: 0 16px;
+    min-height: auto;
   }
 }
 
@@ -1940,7 +1941,8 @@ h3 {
   font-size: 12px;
   line-height: 100%;
   color: rgba(255, 255, 255, 0.7);
-  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
