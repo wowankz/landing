@@ -112,6 +112,11 @@ h3 {
 		margin: 20px 0;
 		padding: 35px 65px 65px;
 		overflow: auto;
+        @media (max-width:425px) {
+            width: 98%;
+            left: 5px ;
+            right: 5px;
+        }
 	}
 
 	&-content__heading {
@@ -300,6 +305,10 @@ h3 {
 	z-index: 100;
 	transform: scale(0);
 	transition: 0.3s;
+
+    @media (max-width:425px) {
+        width: 98%;
+    }
 
 	&__close {
 		position: absolute;

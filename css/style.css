@@ -127,6 +127,14 @@ h3 {
   overflow: auto;
 }
 
+@media (max-width: 425px) {
+  .modal-content {
+    width: 98%;
+    left: 5px;
+    right: 5px;
+  }
+}
+
 .modal-content__heading {
   font-weight: bold;
   font-size: 16px;
@@ -354,6 +362,12 @@ h3 {
           transform: scale(0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media (max-width: 425px) {
+  .modal-cookie {
+    width: 98%;
+  }
 }
 
 .modal-cookie__close {
