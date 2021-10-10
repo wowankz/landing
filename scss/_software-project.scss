@@ -1,6 +1,11 @@
 .software {
 	padding-top: 120px;
 	padding-bottom: 120px;
+
+	@media (max-width: 768px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
 }
 .software-text {
 	display: flex;
@@ -22,10 +27,16 @@
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 40px;
+	overflow: auto;
+	padding-bottom: 20px;
 }
 .software-icon {
 	width: 32px;
 	height: 32px;
+
+	@media (max-width: 425px) {
+		margin-right: 40px;
+	}
 }
 
 .projects {
@@ -41,6 +52,14 @@
 	align-items: center;
 	padding-top: 167px;
 	padding-bottom: 187px;
+
+	@media (max-width: 425px) {
+		flex-direction: column;
+		height: 788px;
+		background: url(../img/bg-project_small.svg);
+		padding-top: 90px;
+		padding-bottom: 80px;
+	}
 }
 
 .projects-card {
@@ -49,12 +68,37 @@
 	grid-gap: 30px;
 	flex-grow: 1;
 	margin-right: 96px;
+	@media (max-width: 425px) {
+		width: 100vw;
+		overflow: auto;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 20px;
+		order: 2;
+		margin-right: 0;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
 }
 
 .projects-desc {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
+
+	&__btn {
+		align-self: flex-start;
+		border: 1px solid #eae9f2;
+		border-radius: 5px;
+		padding: 16px 70px;
+		margin: 30px 0 60px;
+		font-family: 'Open Sans';
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 19px;
+		text-align: center;
+		color: #ffffff;
+		text-decoration: none;
+	}
 }
 .projects-title {
 	max-width: 507px;
@@ -63,10 +107,18 @@
 	line-height: 70px;
 	color: #ffffff;
 	margin-bottom: 30px;
+	@media (max-width: 425px) {
+		font-size: 32px;
+		line-height: normal;
+	}
 }
 
 .projects-text {
 	font-size: 20px;
 	line-height: 150%;
 	color: rgba(255, 255, 255, 0.702469);
+	@media (max-width: 425px) {
+		font-size: 14px;
+		line-height: normal;
+	}
 }

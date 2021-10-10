@@ -14,15 +14,71 @@
 	display: grid;
 	grid-template-columns: min-content 1fr min-content;
 	padding: 20px 35px;
+	align-items: center;
+
+	@media (max-width: 768px) {
+		padding: 16px;
+	}
+
+	&-nav {
+		@media (max-width: 768px) {
+			order: 2;
+		}
+		& .burger-open {
+			display: none;
+			transition: 0.3s;
+			@media (max-width: 768px) {
+				display: flex;
+				transform: scale(1);
+			}
+		}
+
+		& #burger-checkbox:checked + .burger-open {
+			transform: scale(0);
+		}
+
+		& #burger-checkbox:checked ~ .nav > .burger-close {
+			display: flex;
+		}
+
+		& #burger-checkbox:checked ~ .nav {
+			@media (max-width: 768px) {
+				transform: translateX(0);
+			}
+		}
+	}
 }
 
 .header-logo {
 }
 .nav {
+	position: relative;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	padding-right: 125px;
+	transition: 0.3s;
+
+	@media (max-width: 768px) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		max-width: 375px;
+		width: 100%;
+		background: #000000cf;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 16px;
+		z-index: 9999;
+		transform: translateX(-400px);
+	}
+
+	& > .burger-close {
+		display: none;
+		margin-left: auto;
+	}
 }
 .nav-link {
 	text-decoration: none;
@@ -34,6 +90,13 @@
 	&:not(:first-child) {
 		margin-left: 43px;
 	}
+
+	@media (max-width: 768px) {
+		color: white;
+		margin-left: 0 !important;
+		font-size: 20px;
+		line-height: 2;
+	}
 }
 .auth-box {
 	display: flex;
@@ -41,9 +104,10 @@
 
 	&__link {
 		@include button;
-
-		&:not(:first-child) {
-			margin-left: 15px;
+		@media (max-width: 768px) {
+			margin: 0 38px 0 auto;
+			color: #1818e8;
+			background: transparent;
 		}
 	}
 }
@@ -52,6 +116,14 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	padding-top: 109px;
+
+     @media (max-width: 1024px){
+padding: 16px;
+        }
+	@media (max-width: 425px) {
+		grid-template-columns: 1fr;
+
+	}
 
 	&__left {
 		display: flex;
@@ -64,6 +136,9 @@
 		font-size: 90px;
 		line-height: 110%;
 		color: #19191b;
+		@media (max-width: 768px) {
+			font-size: 50px;
+		}
 	}
 
 	&__heading-h3 {
@@ -72,6 +147,9 @@
 		line-height: 100%;
 		color: #19191b;
 		padding: 30px 0 48px;
+		@media (max-width: 768px) {
+			font-size: 17px;
+		}
 	}
 
 	&__text {
@@ -85,17 +163,31 @@
 			line-height: 160%;
 			padding: 10px 0 24px;
 		}
+
+		@media (max-width: 768px) {
+			font-size: 12px;
+			&_small {
+				font-size: 12px;
+			}
+		}
 	}
 
 	&__button {
 		@include button;
 		padding: 19px 93px;
 		align-self: flex-start;
+		@media (max-width: 425px) {
+			align-self: center;
+		}
 	}
 
 	&__slide {
 		display: flex;
 		height: 758px;
+
+		@media (max-width: 425px) {
+			height: 418px;
+		}
 	}
 
 	&__slide-bg {
@@ -108,11 +200,13 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: right;
-		// transform: scale(0);
-		// transition: 0.3s;
-		// animation: show 0.6s 1; /* Указываем название анимации, её время и количество повторов*/
-		// animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
-		// animation-delay: 1s; /* Задержка перед началом */
+
+
+		@media (max-width: 425px) {
+			left: 0;
+			background-position: center;
+			margin-top: 53px;
+		}
 	}
 
 	&__cards {
@@ -124,6 +218,9 @@
 		padding: 0 15px;
 		display: -webkit-box;
 		overflow: hidden;
+		@media (max-width: 425px) {
+			display: none;
+		}
 		&::after {
 			content: '';
 			display: block;
@@ -131,17 +228,17 @@
 			height: 1rem;
 		}
 
-		&:hover .top-content__card{
+		&:hover .top-content__card {
 			animation-play-state: paused;
 		}
 	}
 
-	&__card{
+	&__card {
 		transition: 0.3s;
-		animation: phoneAnimate 12s infinite ;
+		animation: phoneAnimate 12s infinite;
 		animation-timing-function: linear;
 		animation-direction: alternate;
-		&:not(:first-child){
+		&:not(:first-child) {
 			margin-left: 15px;
 		}
 	}
@@ -153,6 +250,10 @@
 	align-items: center;
 	width: 305px;
 
+	@media (max-width: 425px) {
+		width: 168px;
+	}
+
 	&_top {
 		top: 88px;
 		left: 45px;
@@ -163,6 +264,11 @@
 		transition: 0.3s;
 		animation: showFromRight 0.6s 1; /* Указываем название анимации, её время и количество повторов*/
 		animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+		@media (max-width: 425px) {
+			padding: 12px;
+			top: 40px;
+			left: 16vw !important;
+		}
 	}
 
 	&_bottom {
@@ -176,16 +282,30 @@
 		transition: 0.3s;
 		animation: showFromLeft 0.6s 1; /* Указываем название анимации, её время и количество повторов*/
 		animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+		@media (max-width: 425px) {
+			padding: 12px;
+			right: 0;
+			left: 35vw;
+			bottom: 90px;
+		}
 	}
 
 	&__icon {
 		margin-right: 15px;
+		@media (max-width: 425px) {
+			height: 17px;
+			width: 17px;
+		}
 	}
 
 	&__text {
 		font-size: 16px;
 		line-height: 22px;
 		color: #19191b;
+		@media (max-width: 425px) {
+			font-size: 10px;
+			line-height: normal;
+		}
 		&_white {
 			color: #ffffff;
 		}
