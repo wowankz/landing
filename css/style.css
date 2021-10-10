@@ -1956,6 +1956,16 @@ h3 {
   height: 65vw;
 }
 
+@media (max-width: 425px) {
+  .sing-in {
+    background: url(../img/bg-project-singin.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+}
+
 .sing-in__logo {
   width: 127px;
   height: 37px;

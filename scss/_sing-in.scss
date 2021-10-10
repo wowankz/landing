@@ -7,6 +7,13 @@
 	width: 100%;
 	height: 65vw;
 
+	@media (max-width: 425px) {
+		background: url(../img/bg-project-singin.png);
+		height: 100vh;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top right;
+	}
 	&__logo {
 		width: 127px;
 		height: 37px;
@@ -164,7 +171,6 @@
 // 	display: none;
 // 	transition: .3s;
 // 	transform: scale(0);
-
 
 // 	&__close {
 // 		position: absolute;
