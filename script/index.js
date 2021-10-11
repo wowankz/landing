@@ -109,6 +109,7 @@ function init() {
     const howWorkTabs = document.querySelectorAll('.how-work__tab');
     document.addEventListener('scroll', () => {
         const box = howWork.getBoundingClientRect()
+        // console.log(box);
         for (const item of howWorkItems) {
             item.classList.remove('active')
         }
@@ -116,28 +117,57 @@ function init() {
             item.classList.remove('how-work__tab_active')
         }
 
-        if (box.top > -109) {
-            howWorkItems[0].classList.add('active')
-            howWorkTabs[0].classList.add('how-work__tab_active')
-        } else if (box.top > -372) {
-            howWorkTabs[1].classList.add('how-work__tab_active')
-            howWorkItems[1].classList.add('active')
-        } else if (box.top > -640) {
-            howWorkTabs[2].classList.add('how-work__tab_active')
-            howWorkItems[2].classList.add('active')
-        } else if (box.top > -908) {
-            howWorkTabs[3].classList.add('how-work__tab_active')
-            howWorkItems[3].classList.add('active')
-        } else if (box.top > -1176) {
-            howWorkTabs[4].classList.add('how-work__tab_active')
-            howWorkItems[4].classList.add('active')
-        } else if (box.top > -1444) {
-            howWorkTabs[5].classList.add('how-work__tab_active')
-            howWorkItems[5].classList.add('active')
-        } else if (box.top > -1712) {
-            howWorkTabs[6].classList.add('how-work__tab_active')
-            howWorkItems[6].classList.add('active')
-        };
+        if (box.height > 1448) {
+            // Desktop
+            if (box.top > -186) {
+                howWorkItems[0].classList.add('active')
+                howWorkTabs[0].classList.add('how-work__tab_active')
+            } else if (box.top > -464) {
+                howWorkTabs[1].classList.add('how-work__tab_active')
+                howWorkItems[1].classList.add('active')
+            } else if (box.top > -742) {
+                howWorkTabs[2].classList.add('how-work__tab_active')
+                howWorkItems[2].classList.add('active')
+            } else if (box.top > -1020) {
+                howWorkTabs[3].classList.add('how-work__tab_active')
+                howWorkItems[3].classList.add('active')
+            } else if (box.top > -1290) {
+                howWorkTabs[4].classList.add('how-work__tab_active')
+                howWorkItems[4].classList.add('active')
+            } else if (box.top > -1576) {
+                howWorkTabs[5].classList.add('how-work__tab_active')
+                howWorkItems[5].classList.add('active')
+            } else if (box.top > -1712) {
+                howWorkTabs[6].classList.add('how-work__tab_active')
+                howWorkItems[6].classList.add('active')
+            };
+        } else {
+            // Mobile 425 and less
+            if (box.top > -158) {
+                howWorkItems[0].classList.add('active')
+                howWorkTabs[0].classList.add('how-work__tab_active')
+            } else if (box.top > -349) {
+                howWorkTabs[1].classList.add('how-work__tab_active')
+                howWorkItems[1].classList.add('active')
+            } else if (box.top > -559) {
+                howWorkTabs[2].classList.add('how-work__tab_active')
+                howWorkItems[2].classList.add('active')
+            } else if (box.top > -750) {
+                howWorkTabs[3].classList.add('how-work__tab_active')
+                howWorkItems[3].classList.add('active')
+            } else if (box.top > -940) {
+                howWorkTabs[4].classList.add('how-work__tab_active')
+                howWorkItems[4].classList.add('active')
+            } else if (box.top > -1189) {
+                howWorkTabs[5].classList.add('how-work__tab_active')
+                howWorkItems[5].classList.add('active')
+            } else if (box.top > -1712) {
+                howWorkTabs[6].classList.add('how-work__tab_active')
+                howWorkItems[6].classList.add('active')
+            };
+        }
+
+
     })
 }
 

@@ -1311,8 +1311,8 @@ h3 {
           align-items: center;
 }
 
-.how-work__cards-item:not(:first-child) {
-  margin-top: 60px;
+.how-work__cards-item:not(:last-child) {
+  margin-bottom: 60px;
 }
 
 .how-work__cards-item:first-child > .how-work__cards-img::after {
@@ -1482,6 +1482,11 @@ h3 {
   .how-work__card-rect {
     display: none;
   }
+}
+
+#step1, #step2, #step3, #step4, #step5, #step6, #step7 {
+  padding-top: 90px;
+  margin-top: -90px;
 }
 
 .price {
@@ -2128,8 +2133,8 @@ h3 {
 }
 
 .accept__check {
-  width: 30px;
-  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   background: #c4c4c4;
   border-radius: 3px;
   margin-right: 20px;
@@ -2145,6 +2150,7 @@ h3 {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #f5f7ff;
+  text-align: left;
   background: none;
   border: none;
   outline: none;
