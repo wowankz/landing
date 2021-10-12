@@ -172,6 +172,7 @@ function init() {
 
             if (boxTabs.bottom < 85 && boxTabs.bottom > 70) {
                 timer = setTimeout(() => {
+                    console.log('scroll');
                     document.querySelector('.how-work__tab_active').scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
                 }, 100)
             }
