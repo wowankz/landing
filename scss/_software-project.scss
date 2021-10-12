@@ -1,7 +1,7 @@
 .software {
 	padding-top: 120px;
 	padding-bottom: 120px;
-
+overflow: hidden;
 	@media (max-width: 768px) {
 		padding-top: 60px;
 		padding-bottom: 60px;
@@ -29,6 +29,12 @@
 	padding-top: 40px;
 	overflow: auto;
 	padding-bottom: 20px;
+
+	@media (max-width: 425px) {
+        width: 1150px;
+		overflow: hidden;
+        animation: translateIcons 30s linear infinite alternate;
+	}
 }
 .software-icon {
 	width: 32px;

@@ -464,6 +464,28 @@ h3 {
   }
 }
 
+@-webkit-keyframes translateIcons {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-70%);
+            transform: translateX(-70%);
+  }
+}
+
+@keyframes translateIcons {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-70%);
+            transform: translateX(-70%);
+  }
+}
+
 @-webkit-keyframes showFromLeft {
   0% {
     opacity: 0;
@@ -996,6 +1018,7 @@ h3 {
 .software {
   padding-top: 120px;
   padding-bottom: 120px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -1043,6 +1066,15 @@ h3 {
   padding-top: 40px;
   overflow: auto;
   padding-bottom: 20px;
+}
+
+@media (max-width: 425px) {
+  .software-icons {
+    width: 1150px;
+    overflow: hidden;
+    -webkit-animation: translateIcons 30s linear infinite alternate;
+            animation: translateIcons 30s linear infinite alternate;
+  }
 }
 
 .software-icon {

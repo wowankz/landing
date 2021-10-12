@@ -409,6 +409,16 @@ h3 {
 	}
 }
 
+// animation icons
+@keyframes translateIcons {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-70%);
+	}
+}
+
 @keyframes showFromLeft {
 	0% {
 		opacity: 0;

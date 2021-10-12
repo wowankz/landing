@@ -104,12 +104,16 @@ function showModalCookie() {
 
 function init() {
     showModalCookie();
+    const tabs = document.querySelector('.how-work__tabs');
     const howWork = document.querySelector('.how-work__cards');
     const howWorkItems = howWork.querySelectorAll('.how-work__cards-item');
     const howWorkTabs = document.querySelectorAll('.how-work__tab');
+    let timer = null;
     document.addEventListener('scroll', () => {
+        clearTimeout(timer)
         const box = howWork.getBoundingClientRect()
-        // console.log(box);
+        const boxTabs = tabs.getBoundingClientRect()
+        // console.log(boxTabs);
         for (const item of howWorkItems) {
             item.classList.remove('active')
         }
@@ -165,6 +169,14 @@ function init() {
                 howWorkTabs[6].classList.add('how-work__tab_active')
                 howWorkItems[6].classList.add('active')
             };
+
+            if (boxTabs.bottom < 85 && boxTabs.bottom > 70) {
+                timer = setTimeout(() => {
+                    document.querySelector('.how-work__tab_active').scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+                }, 40)
+            }
+
+
         }
 
 
