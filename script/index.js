@@ -174,7 +174,7 @@ function init() {
                 timer = setTimeout(() => {
                     console.log('scroll');
                     document.querySelector('.how-work__tab_active').scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-                }, 100)
+                }, 320)
             }
 
 
