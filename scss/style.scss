@@ -32,6 +32,18 @@ h3 {
     }
 }
 
+.hidden-mobile{
+    @media (max-width: 425px) {
+        display: none !important;
+    }
+}
+
+.hidden-desktop{
+    @media (min-width: 425.9px) {
+        display: none !important;
+    }
+}
+
 .logo {
 }
 
