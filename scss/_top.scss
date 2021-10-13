@@ -28,7 +28,7 @@
 			display: none;
 			transition: 0.3s;
 			@media (max-width: 768px) {
-				display: flex;
+				display: none;
 				transform: scale(1);
 			}
 		}
@@ -105,9 +105,9 @@
 	&__link {
 		@include button;
 		@media (max-width: 768px) {
-			margin: 0 38px 0 auto;
-			color: #1818e8;
-			background: transparent;
+			margin: 0 0 0 auto;
+			// color: #1818e8;
+			// background: transparent;
 		}
 	}
 }
