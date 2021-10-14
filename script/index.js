@@ -1,5 +1,8 @@
 let modal_cookie = null;
-
+let timer = null;
+let tabs = null;
+let howWorkItems = null;
+let howWorkTabs = null;
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
         "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -102,83 +105,87 @@ function showModalCookie() {
     });
 }
 
+function setTimeLineActive(index = 0) {
+    for (const item of howWorkItems) {
+        item.classList.remove('active')
+    }
+    for (const item of howWorkTabs) {
+        item.classList.remove('how-work__tab_active')
+    }
+    howWorkItems[index].classList.add('active')
+    howWorkTabs[index].classList.add('how-work__tab_active')
+}
+
+function setDaleyScrollTab(position) {
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+        tabs.scrollLeft = position;
+    }, 50)
+}
+
 function init() {
     showModalCookie();
-    const tabs = document.querySelector('.how-work__tabs');
+    tabs = document.querySelector('.how-work__tabs');
     const howWork = document.querySelector('.how-work__cards');
-    const howWorkItems = howWork.querySelectorAll('.how-work__cards-item');
-    const howWorkTabs = document.querySelectorAll('.how-work__tab');
-    let timer = null;
+    howWorkItems = howWork.querySelectorAll('.how-work__cards-item');
+    howWorkTabs = document.querySelectorAll('.how-work__tab');
+
     document.addEventListener('scroll', () => {
-        clearTimeout(timer)
         const box = howWork.getBoundingClientRect()
         const boxTabs = tabs.getBoundingClientRect()
-        // console.log(boxTabs);
-        for (const item of howWorkItems) {
-            item.classList.remove('active')
-        }
-        for (const item of howWorkTabs) {
-            item.classList.remove('how-work__tab_active')
+
+        if (boxTabs.top === -30) {
+            //     // Mobile 425 and less
+            if (box.top > -158) {
+                setTimeLineActive(0)
+                setDaleyScrollTab(0)
+            } else if (box.top > -349) {
+                setTimeLineActive(1)
+                setDaleyScrollTab(146);
+            } else if (box.top > -559) {
+                setTimeLineActive(2)
+                setDaleyScrollTab(278);
+            } else if (box.top > -750) {
+                setTimeLineActive(3)
+                setDaleyScrollTab(456);
+            } else if (box.top > -940) {
+                setTimeLineActive(4)
+                setDaleyScrollTab(585);
+            } else if (box.top > -1189) {
+                setTimeLineActive(5)
+                setDaleyScrollTab(733);
+            } else if (box.top > -1712) {
+                setTimeLineActive(6)
+            };
         }
 
-        if (box.height > 1448) {
+        if (boxTabs.top === -50) {
             // Desktop
             if (box.top > -186) {
-                howWorkItems[0].classList.add('active')
-                howWorkTabs[0].classList.add('how-work__tab_active')
+                setTimeLineActive(0)
             } else if (box.top > -464) {
-                howWorkTabs[1].classList.add('how-work__tab_active')
-                howWorkItems[1].classList.add('active')
+                setTimeLineActive(1)
             } else if (box.top > -742) {
-                howWorkTabs[2].classList.add('how-work__tab_active')
-                howWorkItems[2].classList.add('active')
+                setTimeLineActive(2)
             } else if (box.top > -1020) {
-                howWorkTabs[3].classList.add('how-work__tab_active')
-                howWorkItems[3].classList.add('active')
+                setTimeLineActive(3)
             } else if (box.top > -1290) {
-                howWorkTabs[4].classList.add('how-work__tab_active')
-                howWorkItems[4].classList.add('active')
+                setTimeLineActive(4)
             } else if (box.top > -1576) {
-                howWorkTabs[5].classList.add('how-work__tab_active')
-                howWorkItems[5].classList.add('active')
+                setTimeLineActive(5)
             } else if (box.top > -1712) {
-                howWorkTabs[6].classList.add('how-work__tab_active')
-                howWorkItems[6].classList.add('active')
+                setTimeLineActive(6)
             };
-        } else {
-            // Mobile 425 and less
-            if (box.top > -158) {
-                howWorkItems[0].classList.add('active')
-                howWorkTabs[0].classList.add('how-work__tab_active')
-            } else if (box.top > -349) {
-                howWorkTabs[1].classList.add('how-work__tab_active')
-                howWorkItems[1].classList.add('active')
-            } else if (box.top > -559) {
-                howWorkTabs[2].classList.add('how-work__tab_active')
-                howWorkItems[2].classList.add('active')
-            } else if (box.top > -750) {
-                howWorkTabs[3].classList.add('how-work__tab_active')
-                howWorkItems[3].classList.add('active')
-            } else if (box.top > -940) {
-                howWorkTabs[4].classList.add('how-work__tab_active')
-                howWorkItems[4].classList.add('active')
-            } else if (box.top > -1189) {
-                howWorkTabs[5].classList.add('how-work__tab_active')
-                howWorkItems[5].classList.add('active')
-            } else if (box.top > -1712) {
-                howWorkTabs[6].classList.add('how-work__tab_active')
-                howWorkItems[6].classList.add('active')
-            };
-
-            if (boxTabs.bottom < 85 && boxTabs.bottom > 70) {
-                timer = setTimeout(() => {
-                    console.log('scroll');
-                    document.querySelector('.how-work__tab_active').scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-                }, 320)
-            }
-
-
         }
+
+
+
+        //     if (boxTabs.bottom < 85 && boxTabs.bottom > 70) {
+        //
+        //     }
+
+
+        // }
 
 
     })
